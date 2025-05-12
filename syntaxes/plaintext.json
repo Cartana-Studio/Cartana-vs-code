@@ -1,0 +1,15 @@
+{
+  "comments": {
+    "lineComment": null
+  },
+  "brackets": [],
+  "autoClosingPairs": [],
+  "surroundingPairs": [],
+  "folding": {
+    "markers": {
+      "start": null,
+      "end": null
+    }
+  },
+  "wordPattern": "\\S+"
+}

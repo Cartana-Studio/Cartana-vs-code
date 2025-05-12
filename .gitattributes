@@ -10,8 +10,8 @@
 *.ignore text
 *.gitignore text
 
-# Declare files that will always have CRLF line endings on checkout.
+#  Files that will always have CRLF line endings on checkout.
 *.bat text eol=crlf
 
-# Declare files that will always have LF line endings on checkout.
+# Files that will always have LF line endings on checkout.
 *.sh text eol=lf

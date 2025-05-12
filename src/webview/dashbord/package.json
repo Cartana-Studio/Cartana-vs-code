@@ -1,0 +1,16 @@
+{
+  "name": "dashboard-webview",
+  "version": "1.0.0",
+  "description": "React-based dashboard for VS Code webview",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
