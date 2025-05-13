@@ -73,11 +73,11 @@
         "description": " Welcome to Cartana ",
         "icon": "media/icon1.png",
         "when": "viewContainer == cartana",
-        "contents": "Cartana is designed to streamline the development of Cartesi Rollup applications. \n\n Cartana simplifies the process of creating, building, running, and deploying Cartesi applications. \n\n Get started with the following options: \n\n[ 📝 Create a New Project](command:cartana.createNewProject \"Create Project\") \n\n[ 📂 Open an Existing Project](command:cartana.openExistingProject \"Open Project\") \n\n Or \n\n[ 📂 Use an Existing Project Template](command:cartana.openTemplatesMenu \"Use Template\") \n\nFor more information about Cartana, check out [Documentation 📚](https://github.com/Cartana-Studio/Cartana-vs-code)\n\nFor additional inquiries, please [Contact Us 📧](https://mailto:support@cartana.io)"
+        "contents": "Cartana is designed to streamline the development of Cartesi Rollup applications. \n\n Cartana simplifies the process of creating, building, running, and deploying Cartesi applications. \n\n Get started with the following options: \n\n[ 📝 Create a New Project](command:cartana.createNewProject \"Create Project\") \n\n[ 📂 Open an Existing Project](command:cartana.openExistingProject \"Open Project\") \n\n Or \n\n[ 📂 Use Project Template](command:cartana.openTemplatesMenu \"Use Template\") \n\nFor more information about Cartana, check out [Documentation 📚](https://github.com/Cartana-Studio/Cartana-vs-code)\n\nFor additional inquiries, please [Contact Us 📧](https://mailto:support@cartana.io)"
       },
       {
         "view": "cartanaViewSidebar", 
-        "contents": "Cartana is designed to streamline the development of Cartesi Rollup applications. \n\n Cartana simplifies the process of creating, building, running, and deploying Cartesi applications. \n\n Get started with the following options: \n\n[ 📝 Create a New Project](command:cartana.createNewProject \"Create Project\") \n\n[ 📂 Open an Existing Project](command:cartana.openExistingProject \"Open Project\") \n\n Or \n\n[ 📂 Use an Existing Project Template](command:cartana.openTemplatesMenu \"Use Template\") \n\nFor more information about Cartana, check out [Documentation 📚](https://github.com/Cartana-Studio/Cartana-vs-code)\n\nFor additional inquiries, please [Contact Us 📧](https://mailto:support@cartana.io)"
+        "contents": "Cartana is designed to streamline the development of Cartesi Rollup applications. \n\n Cartana simplifies the process of creating, building, running, and deploying Cartesi applications. \n\n Get started with the following options: \n\n[ 📝 Create a New Project](command:cartana.createNewProject \"Create Project\") \n\n[ 📂 Open an Existing Project](command:cartana.openExistingProject \"Open Project\") \n\n Or \n\n[ 📂 Use Project Template](command:cartana.openTemplatesMenu \"Use Template\") \n\nFor more information about Cartana, check out [Documentation 📚](https://github.com/Cartana-Studio/Cartana-vs-code)\n\nFor additional inquiries, please [Contact Us 📧](https://mailto:support@cartana.io)"
       }
     ],
     "commands": [
@@ -94,7 +94,7 @@
         "steps": [
           {
             "id": "step1",
-            "title": "Installation Prerequisites",
+            "title": "Prerequisite Installation ",
             "description": "Ensure you have the necessary prerequisites installed.",
             "media": {
               "markdown": "walkthroughs/gettingStarted.md"
@@ -104,19 +104,8 @@
           },
           {
             "id": "step2",
-            "title": "Create a New Project",
-            "description": "Start by creating a new Cartesi Rollup project.",
-            "media": {
-              "markdown": "walkthroughs/createNewProject.md"
-            },
-            "altText": "Create Project",
-            "completionEvents": ["onCommand:cartana.create"],
-            "when": "true"
-          },
-          {
-            "id": "step3",
-            "title": "Open an Existing Project",
-            "description": "Open an existing Cartesi Rollup project to continue development.",
+            "title": "Create a New Project Or Open an Existing Project ",
+            "description": "Create a new project or open an existing one.",
             "media": {
               "markdown": "walkthroughs/openFolder.md"
             },

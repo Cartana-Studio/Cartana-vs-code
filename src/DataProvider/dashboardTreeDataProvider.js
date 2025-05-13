@@ -1,5 +1,4 @@
 const vscode = require('vscode');
-
 class Dashboard_TreeDataProvider {
   constructor(context) {
     this.context = context;
