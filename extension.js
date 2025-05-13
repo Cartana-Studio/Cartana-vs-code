@@ -19,6 +19,13 @@ function activate(context) {
   const dashboardTreeDataProvider = new Dashboard_TreeDataProvider(context);
   vscode.window.registerTreeDataProvider('DashboardView', dashboardTreeDataProvider);
 
+  // Ensure the DashboardView is refreshed when activated
+  context.subscriptions.push(
+    vscode.commands.registerCommand('cartana.refreshDashboard', () => {
+      dashboardTreeDataProvider.refresh();
+    })
+  );
+
   // Register Execution Simulator view provider
   const executionSimulatorProvider = new ExecutionSimulatorTreeViewProvider();
   vscode.window.registerTreeDataProvider('ExecutionSimulatorView', executionSimulatorProvider);
@@ -34,16 +41,8 @@ function activate(context) {
     })
   );
 
-  // Register the command to open the dashboard view
-  context.subscriptions.push(
-    vscode.commands.registerCommand('cartana.openTreeView', () => {
-      vscode.window.registerTreeDataProvider('DashboardView', dashboardTreeDataProvider);
-    })
-  );
-
   // Register the command to create a new project and open existing project
   context.subscriptions.push(
-    
     vscode.commands.registerCommand('cartana.createNewProject', async () => {
       const options = {
         canSelectFolders: true,

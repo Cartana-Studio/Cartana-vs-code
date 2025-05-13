@@ -4,7 +4,7 @@ class ExecutionSimulatorTreeViewProvider {
   getTreeItem(element) {
     return element;
   }
-
+  
   async getChildren(element) {
     if (!element) {
       // Return mock data for the root level

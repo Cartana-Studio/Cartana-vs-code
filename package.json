@@ -4,13 +4,13 @@
   "description": "Cartana streamlines Cartesi Rollup development by integrating essential tools directly into Visual Studio Code.",
   "version": "0.0.0",
   "license": "MIT",
-  "type": "module",
+  "type": "commonjs",
 
   "engines": {
     "vscode": "^1.97.2"
   },
   "publisher": "CartanaStudio",
-  "homepage": "#",
+  "homepage": "https://Cartana.Studio",
   "repository": {
     "type": "git",
     "url": "https://github.com/Cartana-Studio/Cartana-vs-code"
@@ -25,15 +25,19 @@
     "Other"
   ],
   "icon": "media/icon.png",
-  "main": "./extension.js",
-  "activationEvents": [],
+  "main": "extension.js",
+  "activationEvents": [
+    "*",
+    "onCommand:cartana.refreshDashboard",
+    "onCommand:cartana.openTreeView"
+  ],
   "contributes": {
     "viewsContainers": {
       "activitybar": [
         {
           "id": "cartana",
           "title": "Cartana",
-          "icon": "media/icon1.png"
+          "icon": "media/R-icon.png"
         }
       ]
     },
@@ -41,27 +45,122 @@
       "cartana": [
         {
           "id": "cartanaViewSidebar",
-          "name": "Welcome to Caratan 🚀"
+          "name": "Welcome to Caratan",
+          "icon": "media/icon-sidebar.png"
+        },
+        {
+          "id": "DashboardView",
+          "name": "Dashboard",
+          "icon": "media/icon-dashboard.png"
+        },
+        {
+          "id": "ExecutionSimulatorView",
+          "name": "Execution Simulator",
+          "icon": "media/icon-execution-simulator.png"
+        },
+        {
+          "id": "PerformanceAnalyticsView",
+          "name": "Performance Analytics",
+          "icon": "media/icon-performance-analytics.png"
         }
       ]
     },
-    "viewsWelcome": [
+    "viewsWelcome": [  
       {
+        "view": "cartanaViewSidebar",
         "id": "cartanaViewSidebar",
         "title": "Cartana Sidebar",
         "description": " Welcome to Cartana ",
         "icon": "media/icon1.png",
-        "when": "viewContainer == cartana"
+        "when": "viewContainer == cartana",
+        "contents": "Cartana is designed to streamline the development of Cartesi Rollup applications. \n\n Cartana simplifies the process of creating, building, running, and deploying Cartesi applications. \n\n Get started with the following options: \n\n[ 📝 Create a New Project](command:cartana.createNewProject \"Create Project\") \n\n[ 📂 Open an Existing Project](command:cartana.openExistingProject \"Open Project\") \n\n Or \n\n[ 📂 Use an Existing Project Template](command:cartana.openTemplatesMenu \"Use Template\") \n\nFor more information about Cartana, check out [Documentation 📚](https://github.com/Cartana-Studio/Cartana-vs-code)\n\nFor additional inquiries, please [Contact Us 📧](https://mailto:support@cartana.io)"
       },
       {
         "view": "cartanaViewSidebar", 
-        "contents": " 🎉 Welcome to Caratan 🚀 \n\n  Cartana is designed to streamline the development of Cartesi Rollup applications. \n\n Cartana simplifies the process of creating, building, running, and deploying Cartesi applications. \n\n Get started with the following options: \n\n[ 📝 Create a New Project](command:cartana.create \"Create Project\") \n\n[ 📂 Open an Existing Project](command:vscode.openFolder \"Open Project\")\n\n For more information about Cartana, check out [Documentation 📚](https://github.com/Cartana-Studio/Cartana-vs-code)\n\n For additional inquiries, please [Contact Us 📧](https://mailto:support@cartana.io.)"
+        "contents": "Cartana is designed to streamline the development of Cartesi Rollup applications. \n\n Cartana simplifies the process of creating, building, running, and deploying Cartesi applications. \n\n Get started with the following options: \n\n[ 📝 Create a New Project](command:cartana.createNewProject \"Create Project\") \n\n[ 📂 Open an Existing Project](command:cartana.openExistingProject \"Open Project\") \n\n Or \n\n[ 📂 Use an Existing Project Template](command:cartana.openTemplatesMenu \"Use Template\") \n\nFor more information about Cartana, check out [Documentation 📚](https://github.com/Cartana-Studio/Cartana-vs-code)\n\nFor additional inquiries, please [Contact Us 📧](https://mailto:support@cartana.io)"
       }
     ],
     "commands": [
       {
         "command": "cartana.showWebview",
         "title": "Show Webview"
+      }
+    ],
+    "walkthroughs": [
+      {
+        "id": "cartana.gettingStarted",
+        "title": "Getting Started with Cartana",
+        "description": "Learn how to use Cartana to streamline Cartesi Rollup development.",
+        "steps": [
+          {
+            "id": "step1",
+            "title": "Installation Prerequisites",
+            "description": "Ensure you have the necessary prerequisites installed.",
+            "media": {
+              "markdown": "walkthroughs/gettingStarted.md"
+            },
+            "altText": "Installation Prerequisites",
+            "when": "true"
+          },
+          {
+            "id": "step2",
+            "title": "Create a New Project",
+            "description": "Start by creating a new Cartesi Rollup project.",
+            "media": {
+              "markdown": "walkthroughs/createNewProject.md"
+            },
+            "altText": "Create Project",
+            "completionEvents": ["onCommand:cartana.create"],
+            "when": "true"
+          },
+          {
+            "id": "step3",
+            "title": "Open an Existing Project",
+            "description": "Open an existing Cartesi Rollup project to continue development.",
+            "media": {
+              "markdown": "walkthroughs/openFolder.md"
+            },
+            "altText": "Open Project",
+            "completionEvents": ["onCommand:vscode.openFolder"],
+            "when": "true"
+          },
+          {
+            "id": "step4",
+            "title": "Running the application",
+            "description": "Run the application to see it in action.",
+            "media": {
+              "markdown": "walkthroughs/run.md"
+            }
+          },
+          {
+            "id": "step5",
+            "title": "Deploying the application",
+            "description": "Deploy the application to a Cartesi node.",
+            "media": {
+              "markdown": "walkthroughs/deploy.md"
+            }
+          },
+          {
+            "id": "step6",
+            "title": "Testing the application",
+            "description": "Test the application to ensure it works as expected.",
+            "media": {
+              "markdown": "walkthroughs/run.md"
+            },
+            "altText": "Run Application"
+          },
+          {
+            "id": "step7",
+            "title": "Explore Documentation",
+            "description": "Learn more about Cartana by exploring the documentation.",
+            "media": {
+              "markdown": "documentation.md"
+            },
+            "altText": "Documentation",
+            "completionEvents": ["onLink:https://github.com/Cartana-Studio/Cartana-vs-code"],
+            "when": "true"
+          }
+        ]
       }
     ]
   },

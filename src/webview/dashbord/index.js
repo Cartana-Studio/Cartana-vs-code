@@ -5,11 +5,6 @@ function Dashboard({ data }) {
   return (
     <>
       <h1>Dashboard</h1>
-      <ul>
-        {data.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
     </>
   );
 }
