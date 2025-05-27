@@ -68,7 +68,7 @@ Below are some of the key functionalities that make Cartana an essential tool fo
 
 ### 📞 Contact
 
-If you have any questions, feel free to reach out to us at [support@cartana.io](mailto:support@cartanalabs.io).
+If you have any questions, feel free to reach out to us at [support@cartana.io](mailto:support@cartanalabs.studio).
 
 ### 📄 License
 
@@ -76,13 +76,13 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ### 📚 Documentation
 
-For detailed documentation, please visit our [official documentation](https://docs.cartana.io).
+For detailed documentation, please visit our [official documentation](https://docs.cartana.studio).
 
 ### 🔗 Related Content
 
-- [Cartana Official Website](https://cartana.io)
+- [Cartana Official Website](https://cartana.Studio)
 - [Cartana Repository](https://github.com/cartana-Studio)
-- [Cartana Community Forum](https://forum.cartana.io)
+- [Cartana Community Forum](https://forum.cartana.Studio)
 - [Cartana Discord Server](https://discord.com/cartana)
 
 ---
